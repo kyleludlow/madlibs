@@ -5,6 +5,7 @@
     <title>ngMadLibs</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
 </head>
 <body ng-controller="myCtrl">
     <header>
@@ -25,7 +26,7 @@
             <h2>Provide the following words:</h2>
             <div class="row">
                 <ul class="col-md-4 user-input">
-                    <li><input type="text" name="maleName" ng-model="maleName" placeholder="male name" ></li>
+                    <li><input type="text" ng-model="maleName" placeholder="male name" ></li>
                     <li><input type="text" ng-model="jobTitle" placeholder="job title"></li>
                     <li><input type="text" ng-model="tediousTask" placeholder="tedious task"></li>
                 </ul>
@@ -40,6 +41,7 @@
                     <li><input type="text" ng-model="adjective" placeholder="adjective"></li>
                 </ul>
             </div>
+            <p> {{ jobTitle }}</p>
         </div>
     </section>
 
@@ -50,7 +52,6 @@
     </div>
     </section>
 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/angular.min.js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
 </body>
 </html>
