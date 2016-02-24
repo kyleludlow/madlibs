@@ -1,57 +1,89 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <title>ngMadLibs</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script type="text/javascript" src="js/angular.min.js"></script>
+
 </head>
-<body ng-controller="myCtrl">
-    <header>
-        <div class="container">
+<body>
+<div class="container">
+    <div class="row header-row">
+        <div class="col-md-8 col-md-offset-2">
             <div class="row">
-                <div class="col-md-4 header-left">
-                    <img src="img/smiley.png" alt="">
+                <div class="col-md-4">
+                    <img id="smiley-face" src="img/smiley.png" alt="">
                 </div>
-                <div class="col-md-8 header-right">
+                <div class="col-md-8">
                     <img src="img/logo.png" alt="">
                     <h1>Automate This!</h1>
                 </div>
             </div>
-        </div>
-    </header>
-    <section class="user-input-section">
-        <div class="container">
+
+            <!--User Input Section-->
+            <hr/>
             <h2>Provide the following words:</h2>
-            <div class="row">
-                <ul class="col-md-4 user-input">
-                    <li><input type="text" ng-model="maleName" placeholder="male name" ></li>
-                    <li><input type="text" ng-model="jobTitle" placeholder="job title"></li>
-                    <li><input type="text" ng-model="tediousTask" placeholder="tedious task"></li>
-                </ul>
-                <ul class="col-md-4 user-input">
-                    <li><input type="text" ng-model="dirtyTask" placeholder="dirty task"></li>
-                    <li><input type="text" ng-model="celebrity" placeholder="celebrity"></li>
-                    <li><input type="text" ng-model="uselessSkill" placeholder="useless skill"></li>
-                </ul>
-                <ul class="col-md-4 user-input">
-                    <li><input type="text" ng-model="obnoxiousCelebrity" placeholder="obnoxious celebrity"></li>
-                    <li><input type="text" ng-model="hugeNumber" placeholder="huge number"></li>
-                    <li><input type="text" ng-model="adjective" placeholder="adjective"></li>
-                </ul>
-            </div>
-            <p> {{ jobTitle }}</p>
+            <br/>
+            <form role="form">
+                <div class="row">
+                    <div class="col-md-4 user-input">
+                        <div class="form-group">
+                            <input type="text" ng-model="maleName" placeholder="male name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="jobTitle" placeholder="job title">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="tediousTask" placeholder="tedious task">
+                        </div>
+                    </div>
+                    <div class="col-md-4 user-input">
+                        <div class="form-group">
+                            <input type="text" ng-model="dirtyTask" placeholder="dirty task">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="celebrity" placeholder="celebrity">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="uselessSkill" placeholder="useless skill">
+                        </div>
+                    </div>
+                    <div class="col-md-4 user-input">
+                        <div class="form-group">
+                            <input type="text" ng-model="obnoxiousCelebrity" placeholder="obnoxious celebrity">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" ng-model="hugeNumber" placeholder="huge number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" ng-model="adjective" placeholder="adjective">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!--Story Section-->
+            <hr/>
+            <p><span class="user-input">{{maleName}}</span> was a <span class="user-input">{{jobTitle}}</span> who loved
+                technology. Although he loved parts of his job, he absolutely hated <span class="user-input">{{tediousTask}}</span>
+                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{maleName}}</span> met
+                with his life mentor <span class="user-input">{{celebrity}}</span> who told him to learn how to <span
+                        class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
+                <span class="user-input">{{uselessSkill}}</span> so he studied programming instead.
+                What a great decision! With his new skills, <span class="user-input">{{maleName}}</span> built a(n)
+                <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
+                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span> times
+                faster. </p>
+
         </div>
-    </section>
-
-    <section class="story">
-    <div class="container">
-        <p>{{maleName}} was a {{job title}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious task}} and {{dirty task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless skill}} with Thinkful. Thinkful didn't offer a course on {{useless skill}} so she studied programming instead.
-            What a great decision! With her new skills, {{male name}} built a(n) {{adjective}} robot named {{obnoxiuous celbertity}} that not only loved {{dirty task}} but did it {{huge number}} faster. </p>
     </div>
-    </section>
+</div>
 
-    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+
 </body>
 </html>
