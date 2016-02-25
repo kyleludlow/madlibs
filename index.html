@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>ngMadLibs</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
-<body>
+<body ng-controller="myCtrl">
 <div class="container">
     <div class="row header-row">
         <div class="col-md-8 col-md-offset-2">
@@ -23,13 +23,26 @@
 
             <!--User Input Section-->
             <hr/>
+            <h2>Male or Female?</h2>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="male" ng-model="gender" ng-change="maleOrFemale(gender)">
+                    Male
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="female" ng-model="gender" ng-change="maleOrFemale(gender)">
+                    Female
+                </label>
+            </div>
             <h2>Provide the following words:</h2>
             <br/>
             <form role="form">
                 <div class="row">
                     <div class="col-md-4 user-input">
                         <div class="form-group">
-                            <input type="text" ng-model="maleName" placeholder="male name">
+                            <input type="text" ng-model="name" placeholder="name">
                         </div>
                         <div class="form-group">
                             <input type="text" ng-model="jobTitle" placeholder="job title">
@@ -65,15 +78,29 @@
 
             <!--Story Section-->
             <hr/>
-            <p><span class="user-input">{{maleName}}</span> was a <span class="user-input">{{jobTitle}}</span> who loved
+            <p id="male-story"><span class="user-input">{{ name}}</span> was a <span
+                    class="user-input">{{jobTitle}}</span> who loved
                 technology. Although he loved parts of his job, he absolutely hated <span class="user-input">{{tediousTask}}</span>
-                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{maleName}}</span> met
+                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
                 with his life mentor <span class="user-input">{{celebrity}}</span> who told him to learn how to <span
                         class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
                 <span class="user-input">{{uselessSkill}}</span> so he studied programming instead.
-                What a great decision! With his new skills, <span class="user-input">{{maleName}}</span> built a(n)
+                What a great decision! With his new skills, <span class="user-input">{{name}}</span> built a(n)
                 <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
-                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span> times
+                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span>
+                times
+                faster. </p>
+            <p id="female-story"><span class="user-input">{{name}}</span> was a <span
+                    class="user-input">{{jobTitle}}</span> who loved
+                technology. Although she loved parts of her job, she absolutely hated <span class="user-input">{{tediousTask}}</span>
+                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
+                with her life mentor <span class="user-input">{{celebrity}}</span> who told her to learn how to <span
+                        class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
+                <span class="user-input">{{uselessSkill}}</span> so she studied programming instead.
+                What a great decision! With her new skills, <span class="user-input">{{name}}</span> built a(n)
+                <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
+                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span>
+                times
                 faster. </p>
 
         </div>
@@ -84,6 +111,7 @@
 <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="app/myApp.js"></script>
 
 </body>
 </html>
