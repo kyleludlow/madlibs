@@ -36,82 +36,87 @@
                     Female
                 </label>
             </div>
-            <h2>Provide the following words:</h2>
-            <br/>
-            <form role="form">
-                <div class="row">
-                    <div class="col-md-4 user-input">
-                        <div class="form-group">
-                            <input type="text" ng-model="name" placeholder="name">
+            <div id="inputs">
+                <h2>Provide the following words:</h2>
+                <br/>
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-4 user-input">
+                            <div class="form-group">
+                                <input type="text" ng-model="name" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" ng-model="jobTitle" placeholder="job title">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" ng-model="tediousTask" placeholder="tedious task">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" ng-model="jobTitle" placeholder="job title">
+                        <div class="col-md-4 user-input">
+                            <div class="form-group">
+                                <input type="text" ng-model="dirtyTask" placeholder="dirty task">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" ng-model="celebrity" placeholder="celebrity">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" ng-model="uselessSkill" placeholder="useless skill">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" ng-model="tediousTask" placeholder="tedious task">
+                        <div class="col-md-4 user-input">
+                            <div class="form-group">
+                                <input type="text" ng-model="obnoxiousCelebrity" placeholder="obnoxious celebrity">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" ng-model="hugeNumber" placeholder="huge number">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" ng-model="adjective" placeholder="adjective">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 user-input">
-                        <div class="form-group">
-                            <input type="text" ng-model="dirtyTask" placeholder="dirty task">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" ng-model="celebrity" placeholder="celebrity">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" ng-model="uselessSkill" placeholder="useless skill">
-                        </div>
-                    </div>
-                    <div class="col-md-4 user-input">
-                        <div class="form-group">
-                            <input type="text" ng-model="obnoxiousCelebrity" placeholder="obnoxious celebrity">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" ng-model="hugeNumber" placeholder="huge number">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" ng-model="adjective" placeholder="adjective">
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
 
-            <!--Story Section-->
-            <hr/>
-            <p id="male-story"><span class="user-input">{{ name}}</span> was a <span
-                    class="user-input">{{jobTitle}}</span> who loved
-                technology. Although he loved parts of his job, he absolutely hated <span class="user-input">{{tediousTask}}</span>
-                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
-                with his life mentor <span class="user-input">{{celebrity}}</span> who told him to learn how to <span
-                        class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
-                <span class="user-input">{{uselessSkill}}</span> so he studied programming instead.
-                What a great decision! With his new skills, <span class="user-input">{{name}}</span> built a(n)
-                <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
-                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span>
-                times
-                faster. </p>
-            <p id="female-story"><span class="user-input">{{name}}</span> was a <span
-                    class="user-input">{{jobTitle}}</span> who loved
-                technology. Although she loved parts of her job, she absolutely hated <span class="user-input">{{tediousTask}}</span>
-                and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
-                with her life mentor <span class="user-input">{{celebrity}}</span> who told her to learn how to <span
-                        class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
-                <span class="user-input">{{uselessSkill}}</span> so she studied programming instead.
-                What a great decision! With her new skills, <span class="user-input">{{name}}</span> built a(n)
-                <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
-                that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span class="user-input">{{hugeNumber}}</span>
-                times
-                faster. </p>
+                <!--Story Section-->
+                <hr/>
+                <p id="male-story"><span class="user-input">{{ name}}</span> was a <span
+                        class="user-input">{{jobTitle}}</span> who loved
+                    technology. Although he loved parts of his job, he absolutely hated <span class="user-input">{{tediousTask}}</span>
+                    and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
+                    with his life mentor <span class="user-input">{{celebrity}}</span> who told him to learn how
+                    to <span
+                            class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
+                    <span class="user-input">{{uselessSkill}}</span> so he studied programming instead.
+                    What a great decision! With his new skills, <span class="user-input">{{name}}</span> built a(n)
+                    <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
+                    that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span
+                            class="user-input">{{hugeNumber}}</span>
+                    times
+                    faster. </p>
+                <p id="female-story"><span class="user-input">{{name}}</span> was a <span
+                        class="user-input">{{jobTitle}}</span> who loved
+                    technology. Although she loved parts of her job, she absolutely hated <span class="user-input">{{tediousTask}}</span>
+                    and <span class="user-input">{{dirtyTask}}</span>. So, <span class="user-input">{{name}}</span> met
+                    with her life mentor <span class="user-input">{{celebrity}}</span> who told her to learn how
+                    to <span
+                            class="user-input">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on
+                    <span class="user-input">{{uselessSkill}}</span> so she studied programming instead.
+                    What a great decision! With her new skills, <span class="user-input">{{name}}</span> built a(n)
+                    <span class="user-input">{{adjective}}</span> robot named <span class="user-input">{{obnoxiousCelebrity}}</span>
+                    that not only loved <span class="user-input">{{dirtyTask}}</span> but did it <span
+                            class="user-input">{{hugeNumber}}</span>
+                    times
+                    faster. </p>
 
+            </div>
         </div>
     </div>
-</div>
 
 
-<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="app/myApp.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="app/myApp.js"></script>
 
 </body>
 </html>
