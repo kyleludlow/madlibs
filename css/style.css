@@ -3,9 +3,11 @@
     margin-top: 50px;
     padding-bottom: 20px;
 }
+
 img {
     padding: 10px 0px;
 }
+
 #smiley-face {
     max-width: 125px;
     max-height: auto;
@@ -14,7 +16,19 @@ img {
 input {
     text-align: center;
 }
+
+.error {
+    color: red;
+    text-decoration: none;
+}
+
+#submit-button, #reset-button {
+    float: right;
+    margin-right: 20px;
+}
+
 .user-input {
     font-weight: bold;
+    text-decoration: underline;
 }
 
